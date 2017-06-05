@@ -1,0 +1,80 @@
+package ventas;
+
+import java.util.Scanner;
+
+public class Productos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println ("Escriba el numero de productos a registrar: ");
+		Scanner teclado= new Scanner(System.in);
+		int n= teclado.nextInt();
+		//vector que guardara las ventas de cada producto
+				double P []= new double [n];
+				// se recorre el vector para asignarle las ventas a cada producto
+				for(int i=0; i<n; i++){
+					
+					System.out.println ("Producto "+i+" Digite el valor de la venta: ");
+					double num = teclado.nextDouble();
+					P[i]= num;
+					
+					
+				}
+				
+				// Se recorre el vector para encontrar la menor venta de  producto
+				double menor=100000;
+				int pos=0;
+				for (int j=0; j<n; j++){
+					if(P[j]<menor){
+						menor=P[j];
+						pos=j;
+					}
+					
+				}
+				System.out.println ("El producto:  "+ pos + " tiene la menor venta con "+ menor );
+				
+				// se recorre el vectro para encotrar la mayor venta de producto
+				
+				double mayor=1;
+				int posicion=0;
+				for (int j=0; j<n; j++){
+					if(P[j]>mayor){
+						mayor=P[j];
+						posicion=j;
+					}
+					
+				}
+				System.out.println ("El producto:  "+ posicion + " tiene la mayor venta con "+ mayor );
+				
+				// se suman las ventas para obtener el promedio 
+				double total=0;
+				for(int i=0; i<n; i++){
+					total=total+P[i];
+				}
+				double promedio= total / n;
+				
+				System.out.println ("El promedio de las ventas es: "+ promedio);
+				
+				// ordenamiento del vector de ventas
+				// se utiliza el ordenamiento de burbuja
+				
+				for(int i=1; i<n; i++){
+					for(int j=0 ;j<(n-i); j++){
+						
+						if(P[j] < P[j+1]){
+							double aux=P[j];
+							P[j]= P[j+1];
+							P[j+1]=aux;
+						}
+					}
+				}
+				
+				// imprimiendo las ventas
+				System.out.println ("Ventas ordenadas de mayor a menor: ");
+				for(int i=0; i<n; i++){
+					System.out.print (P[i]+ "//");
+				}
+	}
+
+}

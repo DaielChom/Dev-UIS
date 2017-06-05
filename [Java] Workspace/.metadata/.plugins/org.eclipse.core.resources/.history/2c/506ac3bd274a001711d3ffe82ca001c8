@@ -1,0 +1,36 @@
+package trabajoUDI;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class Tornillos {
+	
+	public static void main(String[] args) {
+		
+		boolean estadisticas = false;
+		ArrayList<String[]> pedidos = new ArrayList<String[]>();
+		
+		do {
+			String[] tornillo = new String[3];
+			JOptionPane.showMessageDialog(null, "Ingrese las caracteristicas del tornillo");
+			tornillo[0] = JOptionPane.showInputDialog("Longitud");
+			
+			tornillo[1] = JOptionPane.showInputDialog("Diametro");
+			
+			tornillo[2] = JOptionPane.showInputDialog("Cantidad");
+			
+			pedidos.add(tornillo);
+			
+			if(JOptionPane.showInputDialog("Calcular estadisticas");.equals("si")) estadisticas = true;
+		
+		} while (estadisticas==false);
+		
+		for (int i = 0; i < pedidos.size(); i++) {
+			System.out.println("Tornillos Tipo " + (i+1) + " Cantidad: " + pedidos.get(i)[2] + " longitud: "+ pedidos.get(i)[0] + " Diametro: " + pedidos.get(i)[1]);
+			
+		}
+	}
+
+}

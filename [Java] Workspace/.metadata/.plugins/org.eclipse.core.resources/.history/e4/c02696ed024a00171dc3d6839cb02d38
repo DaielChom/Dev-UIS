@@ -1,0 +1,33 @@
+package trabajoUDI;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Tornillos {
+	public static void main(String[] args) {
+		
+		boolean estadisticas = false;
+		ArrayList<String[]> pedidos = new ArrayList<String[]>();
+		Scanner ingreso = new Scanner(System.in);
+		
+		do {
+			String[] tornillo = new String[3];
+			System.out.println("Ingrese las caracteristicas del tornillo");
+			System.out.println("Longitud");
+			tornillo[0] = ingreso.next();
+			
+			System.out.println("Diametro");
+			tornillo[1] = ingreso.next();
+			
+			System.out.println("Cantidad");
+			tornillo[2] = ingreso.next();
+			
+			pedidos.add(tornillo);
+			
+			System.out.println("Calcular estadisticas");
+			if(ingreso.next().equals("si")) estadisticas = true;
+		
+		} while (estadisticas==false);
+	}
+
+}

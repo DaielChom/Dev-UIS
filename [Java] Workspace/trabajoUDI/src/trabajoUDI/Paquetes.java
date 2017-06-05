@@ -3,6 +3,8 @@ package trabajoUDI;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class Paquetes {
 
 	public static void main(String[] args) {
@@ -11,19 +13,20 @@ public class Paquetes {
 		ArrayList<String[]> pedidos = new ArrayList<String[]>();
 		
 		
-		System.out.println("Bienvenido");
-		Scanner ingreso = new Scanner(System.in);
+		JOptionPane.showMessageDialog(null, "Bienvenido");
+		
 		
 		do {
-			System.out.println("Porfavor ingrese la cedula del usuario: ");
+			
 			String[] pedido = new String[2];
-			pedido[0] = ingreso.next();
-			System.out.println("cantidad de pedidos: ");
-			pedido[1] = ingreso.next();			
+			
+			pedido[0] = JOptionPane.showInputDialog("Porfavor ingrese la cedula del usuario: ");
+			pedido[1] = JOptionPane.showInputDialog("cantidad de pedidos: ");
+			
 			pedidos.add(pedido);
 			
-			System.out.println("¿Finalizo el dia?");
-			if("si".equals(ingreso.next())){
+		
+			if("si".equals(JOptionPane.showInputDialog("¿Finalizo el dia?"))){
 				salir = false;
 			}			
 		} while (salir == true);
@@ -34,7 +37,7 @@ public class Paquetes {
 		
 		for (int i = 0; i < pedidos.size(); i++) {
 			
-			System.out.println("Cliente: " + pedidos.get(i)[0] + " Cantidad" + pedidos.get(i)[1]);
+			JOptionPane.showMessageDialog(null, "Cliente: " + pedidos.get(i)[0] + " Cantidad" + pedidos.get(i)[1]);
 			
 			if(Integer.parseInt(pedidos.get(i)[1]) > mayor){
 				mayor =  Integer.parseInt(pedidos.get(i)[1]);
@@ -44,9 +47,9 @@ public class Paquetes {
 			total = total + Integer.parseInt(pedidos.get(i)[1]);
 		}
 		
-		System.out.println("Cliente que mas vendio: " + pedidos.get(aux)[0] + " Cantidad: " + mayor);
-		System.out.println("Total de pedidos: " + total);
-		System.out.println("Valor recibido " + total * 20000);
+		JOptionPane.showMessageDialog(null, "Cliente que mas vendio: " + pedidos.get(aux)[0] + " Cantidad: " + mayor);
+		JOptionPane.showMessageDialog(null, "Total de pedidos: " + total);
+		JOptionPane.showMessageDialog(null, "Valor recibido " + total * 20000);
 		
 	}
 }
