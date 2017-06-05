@@ -1,0 +1,31 @@
+package trabajoUDI;
+
+import java.util.Scanner;
+
+public class Fabrica {
+
+	
+
+	  public static void main(String[] args) {
+	    // TODO Auto-generated method stub
+	    
+	    System.out.println ("Escriba el numero de empresas a registrar: ");
+	    Scanner tec= new Scanner(System.in);
+	    int n= tec.nextInt();
+	    int f []= new int [n];
+	    for(int i=n; i<n; i++){
+	      
+	      
+	      
+	      
+	      System.out.println ("Empresa "+i+" Escriba el numero de productos: ");
+	      int num = tec.nextInt();
+	      f[i]= num;
+	      
+	      
+	    }
+
+	  }
+	
+	
+}

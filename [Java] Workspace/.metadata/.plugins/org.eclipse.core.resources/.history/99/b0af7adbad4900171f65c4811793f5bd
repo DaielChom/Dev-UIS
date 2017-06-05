@@ -1,0 +1,12 @@
+package trabajoUDI;
+
+public class Paquetes {
+
+	public static void main(String[] args) {
+		boolean salir = true;
+		do {
+			
+			
+		} while (salir == true);
+	}
+}

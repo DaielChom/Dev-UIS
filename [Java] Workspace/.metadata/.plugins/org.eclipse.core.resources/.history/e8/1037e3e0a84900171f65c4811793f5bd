@@ -1,0 +1,41 @@
+package trabajoUDI;
+
+public class MayorMenosNota {
+
+	public static void main(String[] args) {
+		
+		int numero_estudiantes = 3;
+		
+		//se llena el vector
+		float[] notas = new float[numero_estudiantes];
+		notas[0] = 2;
+		notas[1] = (float) 3.6;
+		notas[2] = (float) 0.8;
+		
+		//variables a usar
+		double nota_mayor = 0;
+		double nota_menor = Double.POSITIVE_INFINITY;
+		int mejor = 0;
+		int peor = 0;
+		
+		//Calcula el peor y mejor estudiante
+		for (int i = 0; i < notas.length; i++) {
+			
+			//Mayor
+			if(notas[i] > nota_mayor){
+				nota_mayor = notas[i];
+				mejor = i+1;
+			}
+			
+			//Menor
+			if(notas[i]< nota_menor){
+				nota_menor = notas[i];
+				peor = i+1;
+			}
+		}
+		
+		System.out.println("El estudiante " + mejor +" es el mejor estudiantes con nota: " + nota_mayor %.2f );
+		System.out.println("El estudiante " + peor +" es el peor estudiantes con nota: " + nota_menor);
+	}
+
+}

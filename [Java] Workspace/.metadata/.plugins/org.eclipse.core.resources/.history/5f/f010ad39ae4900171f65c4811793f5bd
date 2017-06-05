@@ -1,0 +1,18 @@
+package trabajoUDI;
+
+import java.util.ArrayList;
+
+public class Paquetes {
+
+	public static void main(String[] args) {
+		boolean salir = true;
+		ArrayList pedidos = new ArrayList();
+		string[] pedidos = new String[2];
+		System.out.println("Bienvenido");
+		do {
+			System.out.println("Porfavor ingrese la cedula del usuario");
+			
+			
+		} while (salir == true);
+	}
+}

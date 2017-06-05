@@ -1,0 +1,26 @@
+package trabajoUDI;
+
+public class MayorMenosNota {
+
+	public static void main(String[] args) {
+		
+		int numero_estudiantes = 3;
+		
+		//se llena el vector
+		float[] notas = new float[numero_estudiantes];
+		notas[0] = 2;
+		notas[1] = (float) 3.6;
+		notas[2] = (float) 0.8;
+		
+		double nota_mayor = 0;
+		double nota_menor = Double.POSITIVE_INFINITY;
+		int mejor = 0;
+		int peor = 0;
+		
+		for (int i = 0; i < notas.length; i++) {
+			if()
+		}
+
+	}
+
+}

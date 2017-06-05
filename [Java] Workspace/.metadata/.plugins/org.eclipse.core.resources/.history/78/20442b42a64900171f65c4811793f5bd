@@ -1,0 +1,17 @@
+package trabajoUDI;
+
+public class MayorMenosNota {
+
+	public static void main(String[] args) {
+		
+		int numero_estudiantes = 3;
+		
+		do[] notas = new float[numero_estudiantes];
+		notas[0] = 2;
+		notas[1] = 36;
+		notas[2] = 48;
+		
+
+	}
+
+}
