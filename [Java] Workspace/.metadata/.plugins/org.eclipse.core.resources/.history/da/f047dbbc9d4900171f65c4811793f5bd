@@ -1,0 +1,9 @@
+package trabajoUDI;
+
+public class calificarExamen {
+	private int numero_preuntas;
+	private char[][] respuestas_estudiantes = new char[5][numero_preuntas];
+	private char[] respuestas_correctas = new char[numero_preuntas];
+	
+
+}
